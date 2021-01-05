@@ -1,0 +1,7 @@
+CREATE PROCEDURE RESTOREDB
+AS
+EXEC cutConnections
+RESTORE DATABASE School
+   FROM DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Backup\School.bak'
+   WITH REPLACE
+GO 
